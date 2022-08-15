@@ -48,6 +48,9 @@
   transform: translateY(-50%);
   display: none;
 }
+.on-location {
+  color: #f9844e;
+}
 
 @media screen and (max-width: 768px) {
   .hamburger {

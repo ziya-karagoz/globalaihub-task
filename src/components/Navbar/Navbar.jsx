@@ -28,15 +28,36 @@ export const Navbar = () => {
       >
         <ul>
           <li>
-            <NavLink to='/' onClick={() => setIsNavExpanded(false)}>
-              All Courses
-              {pathname == "/" ? <hr /> : null}
-            </NavLink>
+            {pathname === "/" ? (
+              <NavLink
+                style={{ color: "orange" }}
+                to='/'
+                onClick={() => setIsNavExpanded(false)}
+              >
+                All Courses
+                <hr />
+              </NavLink>
+            ) : (
+              <NavLink to='/' onClick={() => setIsNavExpanded(false)}>
+                All Courses
+              </NavLink>
+            )}
           </li>
           <li>
-            <NavLink to='my-courses' onClick={() => setIsNavExpanded(false)}>
-              My Courses{pathname == "/my-courses" ? <hr /> : null}
-            </NavLink>
+            {pathname === "/my-courses" ? (
+              <NavLink
+                style={{ color: "orange" }}
+                to='my-courses'
+                onClick={() => setIsNavExpanded(false)}
+              >
+                My Courses
+                <hr />
+              </NavLink>
+            ) : (
+              <NavLink to='my-courses' onClick={() => setIsNavExpanded(false)}>
+                My Courses
+              </NavLink>
+            )}
           </li>
         </ul>
       </div>

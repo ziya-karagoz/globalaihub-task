@@ -4,14 +4,22 @@ import "./style.css";
 
 import { Button } from "../Button/Button";
 import { CategoryView } from "../CategoryView/CategoryView";
+import { TagView } from "../TagView/TagView";
 export const CourseView = ({ course }) => {
+  const [shouldShowModal, setshouldShowModal] = useState(false);
+
   useEffect(() => {
     console.log("CourseView: ", { course });
   }, [course]);
 
+  const handleModalPopup = () => {
+    setshouldShowModal(true);
+    console.log("deneme");
+  };
+
   return (
     <>
-      <div className='course-box'>
+      <div className='course-box' onClick={handleModalPopup}>
         {course.card_image ? (
           <img
             referrerPolicy='no-referrer'
@@ -25,7 +33,6 @@ export const CourseView = ({ course }) => {
           <h3>{course?.title}</h3>
           {course?.categories?.length > 0 ? (
             <div className='category-tab'>
-              <h4>Categories:</h4>
               <div className='categories'>
                 {course?.categories?.map((category, idx) => {
                   return <CategoryView key={idx}>{category.name}</CategoryView>;
@@ -33,12 +40,12 @@ export const CourseView = ({ course }) => {
               </div>
             </div>
           ) : null}
+          <br />
           {course?.tags?.length > 0 ? (
             <div className='category-tab'>
-              <h4>Tags:</h4>
               <div className='categories'>
                 {course?.tags?.map((tag, idx) => {
-                  return <CategoryView key={idx}>{tag.name}</CategoryView>;
+                  return <TagView key={idx}>{tag.name}</TagView>;
                 })}
               </div>
             </div>
