@@ -1,0 +1,11 @@
+.category {
+  border-width: 2px;
+  border-color: #7392e4;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  font-weight: 900;
+  padding-left: 0.5rem /* 8px */;
+  padding-right: 0.5rem /* 8px */;
+}
