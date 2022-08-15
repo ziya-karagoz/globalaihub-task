@@ -1,11 +1,11 @@
 // Navbar.js
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./style.css";
 import { FaBars } from "react-icons/fa";
 export const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
+  const { pathname } = useLocation();
   return (
     <nav className='navigation'>
       <img
@@ -30,11 +30,12 @@ export const Navbar = () => {
           <li>
             <NavLink to='/' onClick={() => setIsNavExpanded(false)}>
               All Courses
+              {pathname == "/" ? <hr /> : null}
             </NavLink>
           </li>
           <li>
             <NavLink to='my-courses' onClick={() => setIsNavExpanded(false)}>
-              My Courses
+              My Courses{pathname == "/my-courses" ? <hr /> : null}
             </NavLink>
           </li>
         </ul>

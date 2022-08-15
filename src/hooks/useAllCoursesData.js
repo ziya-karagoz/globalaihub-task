@@ -11,5 +11,6 @@ export const useAllCoursesData = (onSuccess, onError) => {
   return useQuery(["all-courses"], () => fetchAllCourses(), {
     onSuccess,
     onError,
+    refetchOnMount: true,
   });
 };
