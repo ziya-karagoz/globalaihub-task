@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-
+import parse from "html-react-parser";
 // Component Imports
 import { CategoryView } from "../CategoryView/CategoryView";
 import { Button } from "../Button/Button";
@@ -48,7 +48,7 @@ export const CourseView = ({ course }) => {
             <img className='card-image' src='./img/gray_624x330.png' />
           )}
           <div className='content'>
-            <h3>{course?.title.rendered}</h3>
+            <h3>{parse(course?.title.rendered)}</h3>
             {categoryData?.data.length > 0 ? (
               <div className='category-tab'>
                 <div className='categories'>

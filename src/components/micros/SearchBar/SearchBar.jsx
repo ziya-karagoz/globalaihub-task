@@ -17,7 +17,7 @@ export const SearchBar = ({ placeholder, passKeywords }) => {
           type='search'
           id='default-search'
           className='search-input'
-          placeholder='Search Mockups, Logos...'
+          placeholder='Search Course...'
           required
         />
         <button type='submit' className='search-btn'>
