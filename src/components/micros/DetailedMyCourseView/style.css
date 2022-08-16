@@ -1,0 +1,113 @@
+.dcv-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  overflow-y: auto;
+}
+.dcv-enrollment {
+  display: flex;
+}
+.dcv-enrollment-item {
+  color: #4974ea;
+  cursor: default;
+  border: 1px solid #4974ea;
+  background-color: #c2ceef;
+  border-radius: 0.25rem;
+  height: fit-content;
+  position: sticky;
+  width: fit-content;
+  width: 160px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -122px;
+  padding-left: 0.25rem;
+  transition-duration: 300ms;
+}
+.dcv-enrollment-item:hover {
+  margin-left: 2px;
+}
+.dcv-top {
+  display: flex;
+  flex-direction: row;
+}
+.dcv-top-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.dcv-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 1rem;
+}
+.dcv-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #4974ea;
+}
+.dcv-h3 {
+  font-size: large;
+  font: 900;
+  color: #7392e4;
+}
+.dcv-link {
+  color: #fff;
+  background-color: #7392e4;
+  text-decoration: none;
+  border: 1px solid #4974ea;
+  border-radius: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.dcv-link:hover {
+  color: #4974ea;
+  background-color: #fff;
+}
+.price-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4974ea;
+}
+@media screen and (max-width: 768px) {
+  .dcv-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .dcv-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25rem;
+  }
+  .dcv-enrollment {
+    display: flex;
+    justify-content: center;
+  }
+  .dcv-enrollment-item {
+    color: #4974ea;
+    cursor: default;
+    height: fit-content;
+    position: sticky;
+    width: fit-content;
+    width: 160px;
+    height: 60px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .dcv-top {
+    display: flex;
+    flex-direction: column;
+  }
+}

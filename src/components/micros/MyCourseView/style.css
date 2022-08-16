@@ -1,5 +1,6 @@
-.course-box {
+.mycourse-box {
   max-width: 24rem;
+  height: fit-content;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -9,7 +10,7 @@
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   transition-duration: 200ms;
 }
-.course-box:hover {
+.mycourse-box:hover {
   box-shadow: 5px 10px 8px #888888;
 }
 .card-image {
@@ -35,7 +36,7 @@
   flex-direction: row;
   align-items: center;
 }
-.courseview-bottom {
+.mycourseview-bottom {
   margin: 1rem;
   display: flex;
   justify-items: center;

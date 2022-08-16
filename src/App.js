@@ -10,9 +10,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 // route component imports
-import { MyCourses } from "./components/macros/MyCourses/MyCourses";
-import { AllCourses } from "./components/macros/AllCourses/AllCourses";
-import { ErrorPage } from "./components/macros/ErrorPage/ErrorPage";
+import { MyCourses } from "./components/pages/MyCourses/MyCourses";
+import { AllCourses } from "./components/pages/AllCourses/AllCourses";
+import { ErrorPage } from "./components/pages/ErrorPage/ErrorPage";
 import { Navbar } from "./components/Navbar/Navbar";
 
 const queryClient = new QueryClient();

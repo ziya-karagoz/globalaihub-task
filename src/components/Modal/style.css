@@ -1,0 +1,23 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #252424cc;
+  height: 100%;
+  width: 100vw;
+}
+.modal {
+  overflow-y: scroll;
+  position: fixed;
+  width: 80%;
+  height: 75%;
+  bottom: 70px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.cloe-btn-div {
+  display: flex;
+  justify-items: left;
+  align-items: flex-end;
+}
