@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import parse from "html-react-parser";
 import "./style.css";
 
-import { Button } from "../micros/Button/Button";
-import { DetailedMyCourseView } from "../micros/DetailedMyCourseView/DetailedMyCourseView";
+import { Button } from "../../micros/Button/Button";
+import { DetailedMyCourseView } from "../../micros/DetailedMyCourseView/DetailedMyCourseView";
 
 export const MyCourseModal = ({ isModalOpen, setIsModalOpen, course }) => {
   if (!isModalOpen) return null;

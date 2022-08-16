@@ -15,11 +15,13 @@ export const Navbar = () => {
   return (
     <nav className='navigation'>
       {/* Navbar Logo */}
-      <img
-        src='./img/logo_quality_min.png'
-        alt='logo'
-        style={{ width: "90px", margin: "1rem" }}
-      />
+      <a href='https://globalaihub.com/'>
+        <img
+          src='./img/logo_quality_min.png'
+          alt='logo'
+          style={{ width: "90px", margin: "1rem" }}
+        />
+      </a>
       {/* Hamburger Button */}
       <button
         className='hamburger'

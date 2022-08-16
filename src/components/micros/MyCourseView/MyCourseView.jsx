@@ -7,7 +7,7 @@ import axios from "axios";
 import { Button } from "../Button/Button";
 import { CategoryView } from "../CategoryView/CategoryView";
 import { TagView } from "../TagView/TagView";
-import { MyCourseModal } from "../../Modal/MyCourseModal";
+import { MyCourseModal } from "../../Modals/MyCourseModal/MyCourseModal";
 
 export const MyCourseView = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
