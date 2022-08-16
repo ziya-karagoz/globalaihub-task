@@ -1,15 +1,19 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./style.css";
 
+import axios from "axios";
+
+// Component Imports
 import { Button } from "../Button/Button";
 import { CategoryView } from "../CategoryView/CategoryView";
 import { TagView } from "../TagView/TagView";
 import { MyCourseModal } from "../../Modal/MyCourseModal";
+
 export const MyCourseView = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
+      {/* Modal for my courses */}
       <MyCourseModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
@@ -17,7 +21,7 @@ export const MyCourseView = ({ course }) => {
       >
         <p onClick={() => setIsModalOpen(false)}>{course?.title}</p>
       </MyCourseModal>
-
+      {/* Single course box element */}
       <div className='mycourse-box'>
         <div onClick={() => setIsModalOpen(true)}>
           {course.card_image ? (
@@ -30,6 +34,7 @@ export const MyCourseView = ({ course }) => {
           ) : (
             <img className='card-image' src='./img/gray_624x330.png' />
           )}
+          {/* Content displayer element */}
           <div className='content'>
             <h3>{course?.title}</h3>
             {course?.categories?.length > 0 ? (
@@ -59,6 +64,7 @@ export const MyCourseView = ({ course }) => {
             )}
           </div>
         </div>
+        {/* Course box bottom element (contains course link anchor) */}
         <div className='mycourseview-bottom'>
           <div></div>
           <a href={course?.link} target='_blank'>

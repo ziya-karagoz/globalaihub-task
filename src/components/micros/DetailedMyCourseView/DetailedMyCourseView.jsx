@@ -1,10 +1,15 @@
 import React from "react";
 import "./style.css";
+
 import parse from "html-react-parser";
+
+//React Icon Imports
 import { AiFillCheckSquare, AiFillCloseSquare } from "react-icons/ai";
 import { AiOutlineTags } from "react-icons/ai";
 import { MdOutlineCategory } from "react-icons/md";
 import { GiPriceTag } from "react-icons/gi";
+
+// Component Imports
 import { CategoryView } from "../CategoryView/CategoryView";
 import { TagView } from "../TagView/TagView";
 

@@ -9,12 +9,15 @@ export const MyCourseModal = ({ isModalOpen, setIsModalOpen, course }) => {
   if (!isModalOpen) return null;
   return (
     <>
+      {/* Backdrop of modal */}
       <div
         className='modal-backdrop'
         onClick={() => setIsModalOpen(false)}
       ></div>
+      {/* Modal */}
       <div className='modal'>
         <DetailedMyCourseView course={course} />
+        {/* Close modal button */}
         <div className='close-btn-div'>
           <Button handleOnClick={() => setIsModalOpen(false)}>Close</Button>
         </div>

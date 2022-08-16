@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useMyCoursesData } from "../../../hooks/useMyCoursesData";
-import { MyCourseView } from "../../micros/MyCourseView/MyCourseView";
 import "./style.css";
+
+// Component Imports
+import { MyCourseView } from "../../micros/MyCourseView/MyCourseView";
+
+// Custom Hook Imports
+import { useMyCoursesData } from "../../../hooks/useMyCoursesData";
+
 export const MyCourses = () => {
+  // React Query On Success Handler
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
   };
+
+  // React Query On Error Handler
   const onError = (err) => {
     console.log("Perform side effect after encountering error", err);
   };

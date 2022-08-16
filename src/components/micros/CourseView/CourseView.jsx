@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
+
+// Component Imports
 import { CategoryView } from "../CategoryView/CategoryView";
 import { Button } from "../Button/Button";
+
+// Custom Hook Imports
 import { useCourseMediaData } from "../../../hooks/useCourseMediaData";
 import { useCourseCategoriesData } from "../../../hooks/useCourseCategoriesData";
 import { useCourseAuthorData } from "../../../hooks/useCourseAuthorData";
+
 export const CourseView = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const mediaUrl = course._links["wp:featuredmedia"][0].href;
   const categoryUrl = course._links["wp:term"][0].href;
   const authorUrl = course._links.author[0].href;
+
   // Custom Hook Calls
   const {
     data: mediaData,
@@ -26,6 +32,7 @@ export const CourseView = ({ course }) => {
     isLoading: authorIsLoading,
     isError: authorIsError,
   } = useCourseAuthorData(authorUrl);
+
   return (
     <>
       <div className='course-box'>

@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { ALL_COURSES_URL } from "../utils/constants";
 
 const fetchAllCourses = () => {
-  return axios.get(
-    "https://40060bec-d8e7-4ad2-96c2-63b9fdb4ef24.mock.pstmn.io/wp-json/ldlms/v2/sfwd-courses"
-  );
+  return axios.get(ALL_COURSES_URL);
 };
 
 export const useAllCoursesData = (onSuccess, onError) => {
