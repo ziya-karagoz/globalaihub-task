@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import parse from "html-react-parser";
+import { formatHTMLImages } from "../../../utils/formatter";
 
 //React Icon Imports
 import { AiFillCheckSquare, AiFillCloseSquare } from "react-icons/ai";
@@ -19,12 +20,10 @@ export const DetailedCourseView = ({
   categoryData,
   authorData,
 }) => {
-  console.log("Incoming Datas: ", {
-    course,
-    mediaData,
-    categoryData,
-    authorData,
-  });
+  useEffect(() => {
+    formatHTMLImages(course?.content.rendered);
+  }, []);
+
   return (
     <div className='dcv-container'>
       <div className='dcv-top'>
@@ -79,8 +78,10 @@ export const DetailedCourseView = ({
           authorDescription={authorData?.description}
         />
       </div>
-      <div className='dcv-course-content' id='cc'>
-        {parse(course?.content.rendered)}
+      <div>
+        <div className='dcv-course-content'>
+          {parse(formatHTMLImages(course?.content.rendered))}
+        </div>
       </div>
       <div className='dcv-bottom'>
         <div className='md:7/12 lg:w-6/12'>
