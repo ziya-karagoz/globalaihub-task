@@ -4,9 +4,9 @@ import "./style.css";
 import axios from "axios";
 
 // Component Imports
-import { Button } from "../Button/Button";
-import { CategoryView } from "../CategoryView/CategoryView";
-import { TagView } from "../TagView/TagView";
+import { Button } from "../../micros/Button/Button";
+import { CategoryView } from "../../micros/CategoryView/CategoryView";
+import { TagView } from "../../micros/TagView/TagView";
 import { MyCourseModal } from "../../Modals/MyCourseModal/MyCourseModal";
 
 export const MyCourseView = ({ course }) => {

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import parse from "html-react-parser";
 // Component Imports
-import { CategoryView } from "../CategoryView/CategoryView";
-import { Button } from "../Button/Button";
+import { CategoryView } from "../../micros/CategoryView/CategoryView";
+import { Button } from "../../micros/Button/Button";
 import { CourseModal } from "../../Modals/CourseModal/CourseModal";
 // Custom Hook Imports
 import { useCourseMediaData } from "../../../hooks/useCourseMediaData";

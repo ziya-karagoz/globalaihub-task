@@ -10,8 +10,8 @@ import { MdOutlineCategory } from "react-icons/md";
 import { GiPriceTag } from "react-icons/gi";
 
 // Component Imports
-import { CategoryView } from "../CategoryView/CategoryView";
-import { TagView } from "../TagView/TagView";
+import { CategoryView } from "../../micros/CategoryView/CategoryView";
+import { TagView } from "../../micros/TagView/TagView";
 
 export const DetailedMyCourseView = ({ course }) => {
   console.log(course);

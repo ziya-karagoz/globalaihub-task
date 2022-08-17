@@ -4,7 +4,7 @@ import Select from "react-select";
 
 import { categoryOptions, tagOptions } from "../../../utils/constants";
 // Component Imports
-import { CourseView } from "../../micros/CourseView/CourseView";
+import { CourseView } from "../../macros/CourseView/CourseView";
 import { SearchBar } from "../../micros/SearchBar/SearchBar";
 
 // Custom Hook Imports

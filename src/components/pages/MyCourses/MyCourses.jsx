@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import Select from "react-select";
 // Component Imports
-import { MyCourseView } from "../../micros/MyCourseView/MyCourseView";
+import { MyCourseView } from "../../macros/MyCourseView/MyCourseView";
 import { SearchBar } from "../../micros/SearchBar/SearchBar";
 // Custom Hook Imports
 import { useMyCoursesData } from "../../../hooks/useMyCoursesData";

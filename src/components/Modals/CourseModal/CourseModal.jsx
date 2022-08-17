@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 import "./style.css";
 
 import { Button } from "../../micros/Button/Button";
-import { DetailedCourseView } from "../../micros/DetailedCourseView/DetailedCourseView";
+import { DetailedCourseView } from "../../macros/DetailedCourseView/DetailedCourseView";
 
 export const CourseModal = ({
   isModalOpen,
