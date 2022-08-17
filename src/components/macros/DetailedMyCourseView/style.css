@@ -1,4 +1,4 @@
-.dcv-container {
+.mdcv-container {
   width: 100%;
   margin: auto;
   display: flex;
@@ -6,10 +6,10 @@
   color: gray;
   overflow-y: auto;
 }
-.dcv-enrollment {
+.mdcv-enrollment {
   display: flex;
 }
-.dcv-enrollment-item {
+.mdcv-enrollment-item {
   color: #4974ea;
   cursor: default;
   border: 1px solid #4974ea;
@@ -27,35 +27,50 @@
   padding-left: 0.25rem;
   transition-duration: 300ms;
 }
-.dcv-enrollment-item:hover {
+.mdcv-enrollment-item:hover {
   margin-left: 2px;
 }
-.dcv-top {
+.mdcv-top {
   display: flex;
   flex-direction: row;
 }
-.dcv-top-right {
+.mdcv-top-right {
   display: flex;
   flex-direction: column;
 }
 
-.dcv-image {
+.mdcv-image {
   max-width: 90%;
   max-height: 90%;
   border-radius: 1rem;
 }
-.dcv-title {
+.mdcv-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #4974ea;
 }
-.dcv-h3 {
+.mdcv-h1 {
+  width: 80%;
+  color: #4974ea;
+}
+.mdcv-h3 {
   font-size: large;
   font: 900;
-  color: #7392e4;
 }
-.dcv-link {
+.empty-category {
+  height: 27px;
+}
+.category-tab {
+  display: flex;
+  flex-direction: column;
+}
+.categories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mdcv-link {
   color: #fff;
   background-color: #7392e4;
   text-decoration: none;
@@ -66,31 +81,30 @@
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-.dcv-link:hover {
+.mdcv-link:hover {
   color: #4974ea;
   background-color: #fff;
 }
 .price-text {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4974ea;
 }
 @media screen and (max-width: 768px) {
-  .dcv-top {
+  .mdcv-top {
     display: flex;
     flex-direction: column;
   }
-  .dcv-image-container {
+  .mdcv-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0.25rem;
   }
-  .dcv-enrollment {
+  .mdcv-enrollment {
     display: flex;
     justify-content: center;
   }
-  .dcv-enrollment-item {
+  .mdcv-enrollment-item {
     color: #4974ea;
     cursor: default;
     height: fit-content;
@@ -106,7 +120,7 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .dcv-top {
+  .mdcv-top {
     display: flex;
     flex-direction: column;
   }

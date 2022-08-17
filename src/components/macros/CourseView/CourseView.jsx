@@ -9,6 +9,7 @@ import { CourseModal } from "../../Modals/CourseModal/CourseModal";
 import { useCourseMediaData } from "../../../hooks/useCourseMediaData";
 import { useCourseCategoriesData } from "../../../hooks/useCourseCategoriesData";
 import { useCourseAuthorData } from "../../../hooks/useCourseAuthorData";
+import { LoadingView } from "../../micros/LoadingView/LoadingView";
 
 export const CourseView = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,6 +33,23 @@ export const CourseView = ({ course }) => {
     isLoading: authorIsLoading,
     isError: authorIsError,
   } = useCourseAuthorData(authorUrl);
+  if (categoryIsLoading || authorIsLoading || mediaIsLoading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "33%",
+        }}
+      >
+        <LoadingView />
+      </div>
+    );
+  }
+  if (categoryIsError || authorIsError || mediaisError) {
+    return <div>Error</div>;
+  }
   return (
     <>
       {" "}

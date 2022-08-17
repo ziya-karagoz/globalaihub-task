@@ -11,6 +11,7 @@ import { MyCourseModal } from "../../Modals/MyCourseModal/MyCourseModal";
 
 export const MyCourseView = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       {/* Modal for my courses */}

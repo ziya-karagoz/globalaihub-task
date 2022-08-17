@@ -6,6 +6,7 @@ import { MyCourseView } from "../../macros/MyCourseView/MyCourseView";
 import { SearchBar } from "../../micros/SearchBar/SearchBar";
 // Custom Hook Imports
 import { useMyCoursesData } from "../../../hooks/useMyCoursesData";
+import { LoadingView } from "../../micros/LoadingView/LoadingView";
 
 export const MyCourses = () => {
   const [searchKeywords, setSearchKeywords] = useState(null);
@@ -22,7 +23,16 @@ export const MyCourses = () => {
   const { data, isError, isLoading } = useMyCoursesData(onSuccess, onError, {
     searchKeywords,
   });
-
+  if (isLoading) {
+    return (
+      <div className='mycourses-container'>
+        <LoadingView />
+      </div>
+    );
+  }
+  if (isError) {
+    return <div>Error</div>;
+  }
   return (
     <>
       <div className='mycourses-container'>

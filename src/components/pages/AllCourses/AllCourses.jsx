@@ -9,6 +9,7 @@ import { SearchBar } from "../../micros/SearchBar/SearchBar";
 
 // Custom Hook Imports
 import { useAllCoursesData } from "../../../hooks/useAllCoursesData";
+import { LoadingView } from "../../micros/LoadingView/LoadingView";
 
 export const AllCourses = () => {
   const [searchKeywords, setSearchKeywords] = useState(null);
@@ -28,6 +29,16 @@ export const AllCourses = () => {
     searchKeywords,
   });
 
+  if (isLoading) {
+    return (
+      <div className='courses-container'>
+        <LoadingView />
+      </div>
+    );
+  }
+  if (isError) {
+    return <div>Error</div>;
+  }
   return (
     <>
       <div className='courses-container'>

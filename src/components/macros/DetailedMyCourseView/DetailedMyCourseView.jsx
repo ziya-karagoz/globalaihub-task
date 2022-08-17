@@ -16,13 +16,13 @@ import { TagView } from "../../micros/TagView/TagView";
 export const DetailedMyCourseView = ({ course }) => {
   console.log(course);
   return (
-    <div className='dcv-container'>
-      <div className='dcv-top'>
-        <div className='dcv-top-left'>
-          <div className='dcv-image-container'>
+    <div className='mdcv-container'>
+      <div className='mdcv-top'>
+        <div className='mdcv-top-left'>
+          <div className='mdcv-image-container'>
             {!!course.card_image ? (
               <img
-                className='dcv-image'
+                className='mdcv-image'
                 referrerPolicy='no-referrer'
                 src={course.card_image}
                 alt='image'
@@ -30,7 +30,7 @@ export const DetailedMyCourseView = ({ course }) => {
               />
             ) : (
               <img
-                className='dcv-image'
+                className='mdcv-image'
                 referrerPolicy='no-referrer'
                 src='./img/gray_624x330.png'
                 alt='image'
@@ -38,8 +38,8 @@ export const DetailedMyCourseView = ({ course }) => {
               />
             )}
           </div>
-          <div className='dcv-enrollment'>
-            <div className='dcv-enrollment-item'>
+          <div className='mdcv-enrollment'>
+            <div className='mdcv-enrollment-item'>
               {course.is_enrolled ? (
                 <>
                   <div>You enrolled this course</div>
@@ -54,11 +54,11 @@ export const DetailedMyCourseView = ({ course }) => {
             </div>
           </div>
         </div>
-        <div className='dcv-top-right'>
+        <div className='mdcv-top-right'>
           <div>
-            <h2 className='dcv-title'> {course.title}</h2>
+            <h2 className='mdcv-title'> {course.title}</h2>
             <div>{parse(course.description)}</div>
-            <h3 className='dcv-h3'>
+            <h3 className='mdcv-h3'>
               <MdOutlineCategory /> Categories:
             </h3>
             {course?.categories?.length > 0 ? (
@@ -75,7 +75,7 @@ export const DetailedMyCourseView = ({ course }) => {
               <div className='empty-category'></div>
             )}
             <br />
-            <h3 className='dcv-h3'>
+            <h3 className='mdcv-h3'>
               <AiOutlineTags /> Tags:
             </h3>
             {course?.tags?.length > 0 ? (
@@ -92,11 +92,11 @@ export const DetailedMyCourseView = ({ course }) => {
           </div>
         </div>
       </div>
-      <div className='dcv-bottom'>
+      <div className='mdcv-bottom'>
         <div className='md:7/12 lg:w-6/12'>
-          <h3 className='dcv-h3'>
+          <h3 className='mdcv-h3'>
             Click{" "}
-            <a href={course.link} className='dcv-link'>
+            <a href={course.link} className='mdcv-link'>
               here
             </a>{" "}
             to learn more about this course.

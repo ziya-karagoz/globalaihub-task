@@ -1,4 +1,4 @@
-.modal-backdrop {
+.mymodal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,7 +6,7 @@
   height: 100%;
   width: 100vw;
 }
-.modal {
+.mymodal {
   z-index: 2000;
   overflow-y: scroll;
   position: fixed;
@@ -17,7 +17,7 @@
   border-radius: 10px;
   padding: 20px;
 }
-.cloe-btn-div {
+.myclose-btn-div {
   display: flex;
   justify-items: left;
   align-items: flex-end;
