@@ -85,7 +85,7 @@
     display: block;
     z-index: 999;
   }
-  hr {
+  .nav-hr {
     display: none;
   }
 }

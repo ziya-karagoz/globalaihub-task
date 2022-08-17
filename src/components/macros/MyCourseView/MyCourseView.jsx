@@ -36,7 +36,10 @@ export const MyCourseView = ({ course }) => {
           )}
           {/* Content displayer element */}
           <div className='content'>
-            <h3>{course?.title}</h3>
+            <h3>
+              {course?.title}
+              <hr />
+            </h3>
             {course?.categories?.length > 0 ? (
               <div className='category-tab'>
                 <div className='categories'>

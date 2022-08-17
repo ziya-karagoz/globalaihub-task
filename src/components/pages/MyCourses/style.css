@@ -31,24 +31,6 @@
   justify-items: center;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.category-tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 60%;
-}
-.category-select {
-  width: 50%;
-  height: 3rem;
-  margin: 1rem;
-  margin-left: 0.25rem;
-}
-.tag-select {
-  width: 50%;
-  height: 3rem;
-  margin: 1rem;
-  margin-left: 0.25rem;
-}
 
 @media screen and (max-width: 768px) {
   .grid-view {
@@ -56,8 +38,5 @@
   }
   .search-elements {
     flex-direction: column;
-  }
-  .category-tag {
-    width: 100%;
   }
 }

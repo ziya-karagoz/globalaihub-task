@@ -1,16 +1,19 @@
-.mycourse-box {
+.course-box {
   max-width: 24rem;
-  height: fit-content;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
+  border-bottom: 6px solid #7392e4;
   background-color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition-duration: 200ms;
+
+  transition: all 0.2s ease-in-out;
+  transition-duration: 100ms;
 }
-.mycourse-box:hover {
+.course-box:hover {
+  transform: scale(1.007);
   box-shadow: 5px 10px 8px #888888;
 }
 .card-image {
@@ -36,7 +39,7 @@
   flex-direction: row;
   align-items: center;
 }
-.mycourseview-bottom {
+.courseview-bottom {
   margin: 1rem;
   display: flex;
   justify-items: center;

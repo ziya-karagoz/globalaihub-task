@@ -24,11 +24,9 @@ export const AllCourses = () => {
   };
 
   // Custom Hook for fetching all courses data
-  const { data, isError, isLoading } = useAllCoursesData(onSuccess, onError);
-
-  useEffect(() => {
-    console.log(searchKeywords);
-  }, [searchKeywords]);
+  const { data, isError, isLoading } = useAllCoursesData(onSuccess, onError, {
+    searchKeywords,
+  });
 
   return (
     <>
@@ -38,18 +36,6 @@ export const AllCourses = () => {
             placeholder={"Search courses by name..."}
             passKeywords={setSearchKeywords}
           />
-          <div className='category-tag'>
-            <div className='category-select'>
-              <Select
-                placeholder='Category...'
-                isClearable
-                options={categoryOptions}
-              />
-            </div>
-            <div className='tag-select'>
-              <Select placeholder='Tag...' isClearable options={tagOptions} />
-            </div>
-          </div>
         </div>
         <div className='header'>
           <h2>
@@ -58,7 +44,7 @@ export const AllCourses = () => {
           </h2>
         </div>
         <div className='grid-view'>
-          {data?.data.map((course, idx) => {
+          {data?.map((course, idx) => {
             return <CourseView course={course} key={idx} />;
           })}
         </div>

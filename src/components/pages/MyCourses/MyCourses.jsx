@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import { categoryOptions, tagOptions } from "../../../utils/constants";
 import Select from "react-select";
 // Component Imports
 import { MyCourseView } from "../../micros/MyCourseView/MyCourseView";
@@ -10,7 +9,6 @@ import { useMyCoursesData } from "../../../hooks/useMyCoursesData";
 
 export const MyCourses = () => {
   const [searchKeywords, setSearchKeywords] = useState(null);
-
   // React Query On Success Handler
   const onSuccess = (data) => {
     console.log("Perform side effect after data fetching", data);
@@ -21,7 +19,9 @@ export const MyCourses = () => {
     console.log("Perform side effect after encountering error", err);
   };
 
-  const { data, isError, isLoading } = useMyCoursesData(onSuccess, onError);
+  const { data, isError, isLoading } = useMyCoursesData(onSuccess, onError, {
+    searchKeywords,
+  });
 
   return (
     <>
@@ -31,18 +31,6 @@ export const MyCourses = () => {
             placeholder={"Search courses by name..."}
             passKeywords={setSearchKeywords}
           />
-          <div className='category-tag'>
-            <div className='category-select'>
-              <Select
-                placeholder='Category...'
-                isClearable
-                options={categoryOptions}
-              />
-            </div>
-            <div className='tag-select'>
-              <Select placeholder='Tag...' isClearable options={tagOptions} />
-            </div>
-          </div>
         </div>
         <div className='header'>
           <h2>
@@ -51,7 +39,7 @@ export const MyCourses = () => {
           </h2>
         </div>
         <div className='grid-view'>
-          {data?.data.map((course, idx) => {
+          {data?.map((course, idx) => {
             return <MyCourseView course={course} key={idx} />;
           })}
         </div>

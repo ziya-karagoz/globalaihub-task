@@ -46,7 +46,7 @@ export const Navbar = () => {
                 onClick={() => setIsNavExpanded(false)}
               >
                 All Courses
-                <hr />
+                <hr className='nav-hr' />
               </NavLink>
             ) : (
               <NavLink to='/' onClick={() => setIsNavExpanded(false)}>
@@ -62,7 +62,7 @@ export const Navbar = () => {
                 onClick={() => setIsNavExpanded(false)}
               >
                 My Courses
-                <hr />
+                <hr className='nav-hr' />
               </NavLink>
             ) : (
               <NavLink to='my-courses' onClick={() => setIsNavExpanded(false)}>

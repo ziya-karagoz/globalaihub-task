@@ -3,10 +3,9 @@ import "./style.css";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMicrophone } from "react-icons/hi";
 export const SearchBar = ({ placeholder, passKeywords }) => {
-  const [keywords, setKeywords] = useState("");
   return (
     <form className='search-form'>
-      <label for='default-search' className='search-bar-label'>
+      <label htmlFor='default-search' className='search-bar-label'>
         Search
       </label>
       <div className='search-container'>
@@ -19,8 +18,13 @@ export const SearchBar = ({ placeholder, passKeywords }) => {
           className='search-input'
           placeholder='Search Course...'
           required
+          onChange={(e) => passKeywords(e.target.value)}
         />
-        <button type='submit' className='search-btn'>
+        <button
+          type='submit'
+          className='search-btn'
+          onClick={(e) => e.preventDefault()}
+        >
           Search
         </button>
       </div>

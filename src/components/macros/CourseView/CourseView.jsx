@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 // Component Imports
 import { CategoryView } from "../CategoryView/CategoryView";
 import { Button } from "../Button/Button";
-
+import { CourseModal } from "../../Modals/CourseModal/CourseModal";
 // Custom Hook Imports
 import { useCourseMediaData } from "../../../hooks/useCourseMediaData";
 import { useCourseCategoriesData } from "../../../hooks/useCourseCategoriesData";
@@ -32,9 +32,18 @@ export const CourseView = ({ course }) => {
     isLoading: authorIsLoading,
     isError: authorIsError,
   } = useCourseAuthorData(authorUrl);
-
   return (
     <>
+      {" "}
+      {/* Modal for my courses */}
+      <CourseModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        course={course}
+        mediaData={mediaData?.data}
+        categoryData={categoryData?.data}
+        authorData={authorData?.data}
+      ></CourseModal>
       <div className='course-box'>
         <div onClick={() => setIsModalOpen(true)}>
           {mediaData?.data.guid.rendered ? (
@@ -48,7 +57,10 @@ export const CourseView = ({ course }) => {
             <img className='card-image' src='./img/gray_624x330.png' />
           )}
           <div className='content'>
-            <h3>{parse(course?.title.rendered)}</h3>
+            <h3>
+              {parse(course?.title.rendered)}
+              <hr />
+            </h3>
             {categoryData?.data.length > 0 ? (
               <div className='category-tab'>
                 <div className='categories'>
@@ -67,7 +79,7 @@ export const CourseView = ({ course }) => {
         <div className='courseview-bottom'>
           <div></div>
           <a href={course?.link} target='_blank'>
-            <Button>Continue Course</Button>
+            <Button>Goto Course</Button>
           </a>
         </div>
       </div>
