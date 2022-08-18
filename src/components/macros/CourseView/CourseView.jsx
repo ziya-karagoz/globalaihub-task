@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import parse from "html-react-parser";
+import { motion } from "framer-motion";
+
 // Component Imports
 import { CategoryView } from "../../micros/CategoryView/CategoryView";
 import { Button } from "../../micros/Button/Button";
@@ -11,7 +13,7 @@ import { useCourseCategoriesData } from "../../../hooks/useCourseCategoriesData"
 import { useCourseAuthorData } from "../../../hooks/useCourseAuthorData";
 import { LoadingView } from "../../micros/LoadingView/LoadingView";
 
-export const CourseView = ({ course }) => {
+export const CourseView = ({ course, indx }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const mediaUrl = course._links["wp:featuredmedia"][0].href;
   const categoryUrl = course._links["wp:term"][0].href;
@@ -62,7 +64,12 @@ export const CourseView = ({ course }) => {
         categoryData={categoryData?.data}
         authorData={authorData?.data}
       ></CourseModal>
-      <div className='course-box'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: indx * 0.25 }}
+        className='course-box'
+      >
         <div onClick={() => setIsModalOpen(true)}>
           {mediaData?.data.guid.rendered ? (
             <img
@@ -100,7 +107,7 @@ export const CourseView = ({ course }) => {
             <Button>Goto Course</Button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

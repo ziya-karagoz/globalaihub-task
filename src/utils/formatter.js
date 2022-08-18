@@ -8,3 +8,8 @@ export const formatHTMLImages = (html) => {
   formatted = formatted.slice(0, formatted.length - addValue.length);
   return formatted;
 };
+
+export const formatDate = (date) => {
+  const temp = new Date(date);
+  return temp.toLocaleDateString();
+};

@@ -19,13 +19,6 @@ export const SearchBar = ({ passKeywords }) => {
           required
           onChange={(e) => passKeywords(e.target.value)}
         />
-        <button
-          type='submit'
-          className='search-btn'
-          onClick={(e) => e.preventDefault()}
-        >
-          Search
-        </button>
       </div>
     </form>
   );

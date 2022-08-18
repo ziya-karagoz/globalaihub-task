@@ -55,7 +55,7 @@ export const AllCourses = () => {
         </div>
         <div className='grid-view'>
           {data?.map((course, idx) => {
-            return <CourseView course={course} key={idx} />;
+            return <CourseView course={course} indx={idx} />;
           })}
         </div>
       </div>

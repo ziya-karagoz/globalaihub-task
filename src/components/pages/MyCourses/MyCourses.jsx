@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import Select from "react-select";
 // Component Imports
 import { MyCourseView } from "../../macros/MyCourseView/MyCourseView";
 import { SearchBar } from "../../micros/SearchBar/SearchBar";
@@ -50,7 +49,7 @@ export const MyCourses = () => {
         </div>
         <div className='grid-view'>
           {data?.map((course, idx) => {
-            return <MyCourseView course={course} key={idx} />;
+            return <MyCourseView course={course} indx={idx} />;
           })}
         </div>
       </div>

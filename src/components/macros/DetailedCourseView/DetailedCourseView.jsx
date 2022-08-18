@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import parse from "html-react-parser";
-import { formatHTMLImages } from "../../../utils/formatter";
+import { formatHTMLImages, formatDate } from "../../../utils/formatter";
 
 //React Icon Imports
 import { MdOutlineCategory } from "react-icons/md";
@@ -39,6 +39,7 @@ export const DetailedCourseView = ({
             />
           )}
           <h1 className='dcv-h1'>{parse(course?.title.rendered)}</h1>
+          <p className='dcv-h3'>{formatDate(course?.date)}</p>
           <br />
           <p className='price-text'>
             <GiPriceTag /> Price:{" "}

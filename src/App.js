@@ -28,7 +28,6 @@ function App() {
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
-        <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
       </QueryClientProvider>
     </>
   );

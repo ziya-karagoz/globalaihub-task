@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./style.css";
-
+import { motion } from "framer-motion";
 // Component Imports
 import { Button } from "../../micros/Button/Button";
 import { CategoryView } from "../../micros/CategoryView/CategoryView";
 import { TagView } from "../../micros/TagView/TagView";
 import { MyCourseModal } from "../../Modals/MyCourseModal/MyCourseModal";
 
-export const MyCourseView = ({ course }) => {
+export const MyCourseView = ({ course, indx }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -21,7 +21,12 @@ export const MyCourseView = ({ course }) => {
         <p onClick={() => setIsModalOpen(false)}>{course?.title}</p>
       </MyCourseModal>
       {/* Single course box element */}
-      <div className='mycourse-box'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: indx * 0.25 }}
+        className='mycourse-box'
+      >
         <div onClick={() => setIsModalOpen(true)}>
           {course.card_image ? (
             <img
@@ -73,7 +78,7 @@ export const MyCourseView = ({ course }) => {
             <Button>Continue Course</Button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
