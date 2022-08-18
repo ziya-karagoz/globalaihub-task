@@ -2,11 +2,11 @@
 
 In the project directory, you have to download node modules by run this command:
 
-### `nnpm install`
+>### `nnpm install`
 
 
 Then, to run this project you have to run following command:
-### `npm start`
+>### `npm start`
 
 
 Or, if you don't wan to bother with all these and focus more on UX, I already deployed the website for you:
