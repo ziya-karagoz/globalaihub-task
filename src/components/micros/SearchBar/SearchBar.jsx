@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import "./style.css";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
-import { HiOutlineMicrophone } from "react-icons/hi";
-export const SearchBar = ({ placeholder, passKeywords }) => {
+import { AiOutlineSearch } from "react-icons/ai";
+export const SearchBar = ({ passKeywords }) => {
   return (
     <form className='search-form'>
       <label htmlFor='default-search' className='search-bar-label'>
@@ -16,7 +15,7 @@ export const SearchBar = ({ placeholder, passKeywords }) => {
           type='search'
           id='default-search'
           className='search-input'
-          placeholder='Search Course...'
+          placeholder='Search courses by name...'
           required
           onChange={(e) => passKeywords(e.target.value)}
         />

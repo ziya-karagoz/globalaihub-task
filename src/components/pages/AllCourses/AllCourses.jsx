@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
-import Select from "react-select";
 
 import { categoryOptions, tagOptions } from "../../../utils/constants";
 // Component Imports

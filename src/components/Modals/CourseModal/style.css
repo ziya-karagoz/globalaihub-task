@@ -20,5 +20,5 @@
 .close-btn-div {
   display: flex;
   justify-items: left;
-  justify-content: end;
+  justify-content: flex-end;
 }

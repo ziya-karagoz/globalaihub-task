@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-
 import { NavLink, useLocation } from "react-router-dom";
 
 //React Icons Imports

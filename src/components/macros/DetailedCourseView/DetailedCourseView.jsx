@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.css";
 import parse from "html-react-parser";
 import { formatHTMLImages } from "../../../utils/formatter";
 
 //React Icon Imports
-import { AiFillCheckSquare, AiFillCloseSquare } from "react-icons/ai";
-import { AiOutlineTags } from "react-icons/ai";
 import { MdOutlineCategory } from "react-icons/md";
 import { GiPriceTag } from "react-icons/gi";
 
 // Component Imports
 import { CategoryView } from "../../micros/CategoryView/CategoryView";
-import { TagView } from "../../micros/TagView/TagView";
 import { AuthorView } from "../../micros/AuthorView/AuthorView";
 
 export const DetailedCourseView = ({
@@ -20,10 +17,6 @@ export const DetailedCourseView = ({
   categoryData,
   authorData,
 }) => {
-  useEffect(() => {
-    formatHTMLImages(course?.content.rendered);
-  }, []);
-
   return (
     <div className='dcv-container'>
       <div className='dcv-top'>
@@ -33,7 +26,7 @@ export const DetailedCourseView = ({
               className='dcv-image'
               referrerPolicy='no-referrer'
               src={mediaData.guid.rendered}
-              alt='image'
+              alt=''
               loading='lazy'
             />
           ) : (
@@ -41,7 +34,7 @@ export const DetailedCourseView = ({
               className='dcv-image'
               referrerPolicy='no-referrer'
               src='./img/gray_624x330.png'
-              alt='image'
+              alt=''
               loading='lazy'
             />
           )}
