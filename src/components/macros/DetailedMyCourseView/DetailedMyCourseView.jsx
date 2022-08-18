@@ -58,34 +58,40 @@ export const DetailedMyCourseView = ({ course }) => {
           <div>
             <h2 className='mdcv-title'> {course.title}</h2>
             <div>{parse(course.description)}</div>
-            <h3 className='mdcv-h3'>
-              <MdOutlineCategory /> Categories:
-            </h3>
+
             {course?.categories?.length > 0 ? (
-              <div className='category-tab'>
-                <div className='categories'>
-                  {course?.categories?.map((category, idx) => {
-                    return (
-                      <CategoryView key={idx}>{category.name}</CategoryView>
-                    );
-                  })}
+              <>
+                <h3 className='mdcv-h3'>
+                  <MdOutlineCategory /> Categories:
+                </h3>
+                <div className='category-tab'>
+                  <div className='categories'>
+                    {course?.categories?.map((category, idx) => {
+                      return (
+                        <CategoryView key={idx}>{category.name}</CategoryView>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              </>
             ) : (
               <div className='empty-category'></div>
             )}
             <br />
-            <h3 className='mdcv-h3'>
-              <AiOutlineTags /> Tags:
-            </h3>
+
             {course?.tags?.length > 0 ? (
-              <div className='category-tab'>
-                <div className='categories'>
-                  {course?.tags?.map((tag, idx) => {
-                    return <TagView key={idx}>{tag.name}</TagView>;
-                  })}
+              <>
+                <h3 className='mdcv-h3'>
+                  <AiOutlineTags /> Tags:
+                </h3>
+                <div className='category-tab'>
+                  <div className='categories'>
+                    {course?.tags?.map((tag, idx) => {
+                      return <TagView key={idx}>{tag.name}</TagView>;
+                    })}
+                  </div>
                 </div>
-              </div>
+              </>
             ) : (
               <div className='empty-category'></div>
             )}
