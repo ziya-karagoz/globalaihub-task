@@ -2,7 +2,7 @@
 
 In the project directory, you have to download node modules by run this command:
 
->### `nnpm install`
+>### `npm install`
 
 
 Then, to run this project you have to run following command:
